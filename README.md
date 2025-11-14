@@ -90,7 +90,7 @@ https://thingspeak.mathworks.com/channels/3161516
 - Script de servidor HTTP:
 
 python
-<!-- from http.server import BaseHTTPRequestHandler, HTTPServer
+from http.server import BaseHTTPRequestHandler, HTTPServer
 
 class Handler(BaseHTTPRequestHandler):
     def do_POST(self):
@@ -98,13 +98,13 @@ class Handler(BaseHTTPRequestHandler):
         data = self.rfile.read(content_length)
         print("Recebido:", data.decode())
         
-        self.send_response(200)
+  self.send_response(200)
         self.end_headers()
         self.wfile.write(b"OK")
 
 server = HTTPServer(("0.0.0.0", 80), Handler)
 print("Servidor HTTP rodando na porta 80...")
-server.serve_forever() -->
+server.serve_forever()
 
 ---
 
